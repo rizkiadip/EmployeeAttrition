@@ -1,6 +1,6 @@
 # Employee Attrition Prediction 
 
-<center><img src="https://harver.com/wp-content/uploads/2019/02/Employee-Attrition-Turnover-1024x437.jpg" width=700></center>
+<img src="https://harver.com/wp-content/uploads/2019/02/Employee-Attrition-Turnover-1024x437.jpg">
 
 ## Background 
 Employee Attrition adalah kondisi ketika karyawan memutuskan untuk meninggalkan perusahaan, baik karena pensiun, masalah kesehatan, mencari kesempatan di perusahaan lain untuk meningkatkan karir, ketidakcocokan dengan kultur perusahaan, dan alasan lainnya. Pada dasarnya, keluar masuk karyawan merupakan hal yang normal, namun bagaimana jika tingkat attrition di perusahaan sangat tinggi? Ini dapat merugikan perusahaan.Perusahaan harus mengeluarkan biaya ekstra untuk melakukan perekrutan dan pelatihan karyawan baru.
@@ -24,24 +24,24 @@ Beberapa tahap yang dilakukan terhadap data yang diperoleh adalah sebagai beriku
 
 ## Dashboard Preview
 ### Home Page
-<img src = 'Screenshot/1_home.png'>
+<img src = 'Screenshot/1_home.PNG'>
 <br>
 
 ### About Page
-<img src = 'Screenshot/2_about.png'>
+<img src = 'Screenshot/2_about.PNG'>
 <br>
 
 ### Dataset Page
-<img src = 'Screenshot/3_dataset.png'>
+<img src = 'Screenshot/3_dataset.PNG'>
 <br>
 
 ### EDA Page
-<img src = 'Screenshot/4_eda.png'>
+<img src = 'Screenshot/4_eda.PNG'>
 <br>
 
 ### Predict Page
-<img src = 'Screenshot/5_predict.png'>
+<img src = 'Screenshot/5_predict.PNG'>
 <br>
 
 ### Result Page
-<img src = 'Screenshot/6_result.png'>
+<img src = 'Screenshot/6_result.PNG'>
