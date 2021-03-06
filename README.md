@@ -1,6 +1,6 @@
 # Employee Attrition Prediction 
 
-<img src="https://harver.com/wp-content/uploads/2019/02/Employee-Attrition-Turnover-1024x437.jpg" width=700>
+<center><img src="https://harver.com/wp-content/uploads/2019/02/Employee-Attrition-Turnover-1024x437.jpg" width=700></center>
 
 ## Background 
 Employee Attrition adalah kondisi ketika karyawan memutuskan untuk meninggalkan perusahaan, baik karena pensiun, masalah kesehatan, mencari kesempatan di perusahaan lain untuk meningkatkan karir, ketidakcocokan dengan kultur perusahaan, dan alasan lainnya. Pada dasarnya, keluar masuk karyawan merupakan hal yang normal, namun bagaimana jika tingkat attrition di perusahaan sangat tinggi? Ini dapat merugikan perusahaan.Perusahaan harus mengeluarkan biaya ekstra untuk melakukan perekrutan dan pelatihan karyawan baru.
