@@ -24,19 +24,22 @@ Beberapa tahap yang dilakukan terhadap data yang diperoleh adalah sebagai beriku
 
 ## Dashboard Preview
 ### Home Page
-<img src = 'Screenshot/1_home.PNG'>
+<img src = 'Interface/1_home.png'>
 
 ### About Page
-<img src = 'Screenshot/2_about.PNG'>
+<img src = 'Interface/2_about.png'>
 
 ### Dataset Page
-<img src = 'Screenshot/3_dataset.PNG'>
+<img src = 'Interface/3_dataset.png'>
+
+### Visualization Page
+<img src = 'Interface/4_visualization.png'>
 
 ### EDA Page
-<img src = 'Screenshot/4_eda.PNG'>
+<img src = 'Interface/5_eda.png'>
 
 ### Predict Page
-<img src = 'Screenshot/5_predict.PNG'>
+<img src = 'Interface/6_predict.png'>
 
 ### Result Page
-<img src = 'Screenshot/6_result.PNG'>
+<img src = 'Interface/7_result.png'>
