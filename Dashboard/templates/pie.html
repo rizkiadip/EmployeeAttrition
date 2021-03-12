@@ -1,0 +1,40 @@
+{% extends 'visualization.html' %}
+
+{% block content %}
+<br>
+<section>
+    <!-- Menu Dropdown -->
+    <form action="{{url_for('pie_fn')}}" id="form">
+        <div class="container 25%">
+            <div class="row uniform">
+
+                <!--Dropdown Hue-->
+                <div class="12u$">
+                    <center>
+                        <h3>Hue</h3>
+                    </center>
+                    <div class="select-wrapper">
+                        <select class="form-control" name="hue" onchange="form.submit()">
+                            {% for drop in drop_hue %}
+                                {% if focus_hue == drop[0] %}
+                                    return '<option value={{drop[0]}} selected>{{drop[1]}}</option>'
+                                {% else %}
+                                    return '<option value={{drop[0]}}>{{drop[1]}}</option>'
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="chart" id="plot">
+        <script>
+            var graphs = {{plot | safe}};
+            Plotly.plot('plot',graphs,{});
+        </script>
+    </div>
+</section>
+
+{% endblock content %}

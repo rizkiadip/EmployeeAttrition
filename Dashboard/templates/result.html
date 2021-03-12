@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Result | Attrition Dashboard</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="http://127.0.0.1:7777/">Attrition Prediction</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="http://127.0.0.1:7777/about">About</a></li>
+					<li><a href="http://127.0.0.1:7777/dataset">Dataset</a></li>
+					<li><a href="http://127.0.0.1:7777/visualization">Visualization</a></li>
+					<li><a href="http://127.0.0.1:7777/eda">EDA</a></li>
+					<li><a href="http://127.0.0.1:7777/predict">Predict</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major">
+						<h2>Prediction Result</h2>
+					</header>
+
+					<hr />
+
+					<center> 
+						<br>
+						<h2><u> "{{ pred }}" </u></h2>
+						<br>
+						<p>
+							<b>{{data['Gender'][0]}}</b> | <b>{{data['MaritalStatus'][0]}}</b> | <b>{{data['Age'][0]}}</b> years old | <b>{{data['BusinessTravel'][0]}}</b> for business | Department of <b>{{data['Department'][0]}}</b> | live <b>{{data['DistanceFromHome'][0]}} km</b> from Company | <b>{{data['Education'][0]}}</b> in <b>{{data['EducationField'][0]}}</b> field 
+							<br>
+							<b>{{data['JobInvolvement'][0]}}</b> job involvement | <b>{{data['JobLevel'][0]}}</b> level as <b>{{data['JobRole'][0]}}</b> | <b>{{data['EnvironmentSatisfaction'][0]}}</b> environment satisfaction | <b>{{data['JobSatisfaction'][0]}}</b> job satisfaction | <b>{{data['RelationshipSatisfaction'][0]}}</b> relationship satisfaction 
+							<br>
+							experience in <b>{{data['NumCompaniesWorked'][0]}}</b> company/companies | <b>{{data['OverTime'][0]}}</b> over time | <b>{{data['PercentSalaryHike'][0]}}%</b> salary hike | <b>{{data['PerformanceRating'][0]}}</b> performance rating | <b>$ {{data['MonthlyIncome'][0]}}</b> monthy income | <b>$ {{data['MonthlyRate'][0]}}</b> monthy rate
+							<br>
+							<b>{{data['StockOptionLevel'][0]}}</b> stock option level | <b>{{data['TotalWorkingYears'][0]}}</b> years total working experience | <b>{{data['TrainingTimesLastYear'][0]}}</b> times training last year | <b>{{data['WorkLifeBalance'][0]}}</b> work life balance | <b>{{data['YearsAtCompany'][0]}}</b> years at Company
+							<br>
+							<b>{{data['YearsInCurrentRole'][0]}}</b> years in current role| <b>{{data['YearsSinceLastPromotion'][0]}}</b> years since last promotion | <b>{{data['YearsWithCurrManager'][0]}}</b> years with current manager
+						</p>
+						<br>
+
+						<ul class="actions">
+							<li>
+								<a href="http://127.0.0.1:7777/predict" class="button">Predict More</a>
+							</li>
+						</ul>
+					</center>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="8u 12u$(medium)">
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved.</li>
+							<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+							<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+						</ul>
+					</div>
+					<div class="4u$ 12u$(medium)">
+						<ul class="icons">
+							<li>Modified by Rizki Adi P. | 2021</li>
+							<li><a href="https://www.instagram.com/rizkiadip/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/in/rizkiadiprayitno/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/rizkiadip" class="icon fa-github"><span class="label">Github</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

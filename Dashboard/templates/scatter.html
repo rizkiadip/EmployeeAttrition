@@ -1,0 +1,76 @@
+{% extends 'visualization.html' %}
+
+{% block content %}
+<br>
+<section>
+    <!-- Menu Dropdown -->
+    <form action="{{url_for('scatt_fn')}}" id="form">
+        <div class="container 75%">
+            <div class="row uniform">
+                
+                <!--Dropdown X Axis-->
+                <div class="4u 12u$(4)">
+                    <center>
+                        <h3>X Axis</h3>
+                    </center>
+                    <div class="select-wrapper">
+                        <select class="form-control" name="cat_x" onchange="form.submit()">
+                            {% for drop in drop_x %}
+                                {% if focus_x == drop[0] %}
+                                    return '<option value={{drop[0]}} selected>{{drop[1]}}</option>'
+                                {% else %}
+                                    return '<option value={{drop[0]}}>{{drop[1]}}</option>'
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Dropdwon Y Axis -->
+                <div class="4u 12u$(4)">
+                    <center>
+                        <h3>Y Axis</h3>
+                    </center>
+                    <div class="select-wrapper">
+                        <select class="form-control" name="cat_y" onchange="form.submit()">
+                            {% for drop in drop_y %}
+                                {% if focus_y == drop[0] %}
+                                    return '<option value={{drop[0]}} selected>{{drop[1]}}</option>'
+                                {% else %}
+                                    return '<option value={{drop[0]}}>{{drop[1]}}</option>'
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <!--Dropdown Hue-->
+                <div class="4u$ 12u$(4)">
+                    <center>
+                        <h3>Hue</h3>
+                    </center>
+                    <div class="select-wrapper">
+                        <select class="form-control" name="hue" onchange="form.submit()"> 
+                            {% for drop in drop_hue %}
+                                {% if focus_hue == drop[0] %}
+                                    return '<option value={{drop[0]}} selected>{{drop[1]}}</option>'
+                                {% else %}
+                                    return '<option value={{drop[0]}}>{{drop[1]}}</option>'
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="chart" id="plot">
+        <script>
+            var graphs = {{plot | safe}};
+            Plotly.plot('plot',graphs,{});
+        </script>
+    </div>
+</section>
+
+{% endblock content %}

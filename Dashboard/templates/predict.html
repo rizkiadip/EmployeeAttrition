@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Predict | Attrition Dashboard</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="http://127.0.0.1:7777/">Attrition Prediction</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="http://127.0.0.1:7777/about">About</a></li>
+					<li><a href="http://127.0.0.1:7777/dataset">Dataset</a></li>
+					<li><a href="http://127.0.0.1:7777/visualization">Visualization</a></li>
+					<li><a href="http://127.0.0.1:7777/eda">EDA</a></li>
+					<li><a href="http://127.0.0.1:7777/predict">Predict</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major">
+						<h2>Data Prediction</h2>
+					</header>
+
+					<hr />
+					
+					<!-- Form -->
+					<section>
+						<h3>Fill this form to predict Attrition</h3>
+						<form method="POST" action="http://127.0.0.1:7777/result">
+							<div class="row uniform 50%">
+								<!-- Age -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="Age" max='80' min='18' placeholder='- Age -' required>
+								</div>
+
+								<!-- BusinessTravel -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="BusinessTravel" id="category" required>
+											<option value="" disabled selected>- Business Travel -</option>
+											<option value="Non-Travel">Non Travel</option>
+											<option value="Travel_Rarely">Travel Rarely</option>
+											<option value="Travel_Frequently">Travel Frequently</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- Department -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="Department" id="category" required>
+											<option value="" disabled selected>- Department -</option>
+											<option value="Research & Development">Research & Development</option>
+											<option value="Sales">Sales</option>
+											<option value="Human Resources">Human Resources</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- DistanceFromHome -->
+								<div class="3u$ 12u$(4)">
+									<input type="number" name="DistanceFromHome" max='29' min='1' placeholder='- Distance From Home (km) -' required>
+								</div>
+
+								<!-- Education -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="Education" id="category" required>
+											<option value="" disabled selected>- Education -</option>
+											<option value="1">Below College</option>
+											<option value="2">College</option>
+											<option value="3">Bachelor</option>
+											<option value="4">Master</option>
+											<option value="5">Doctor</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- EducationField -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="EducationField" id="category" required>
+											<option value="" disabled selected>- Education Field -</option>
+											<option value="Life Sciences">Life Sciences</option>
+											<option value="Medical">Medical</option>
+											<option value="Marketing">Marketing</option>
+											<option value="Technical Degree">Technical Degree</option>
+											<option value="Human Resources">Human Resources</option>
+											<option value="Other">Other</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- EnvironmentSatisfaction -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="EnvironmentSatisfaction" id="category" required>
+											<option value="" disabled selected>- Environment Satisfaction -</option>
+											<option value="1">Low</option>
+											<option value="2">Medium</option>
+											<option value="3">High</option>
+											<option value="4">Very High</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- Gender -->
+								<div class="3u$ 12u$(4)">
+									<div class="select-wrapper">
+										<select name="Gender" id="category" required>
+											<option value="" disabled selected>- Gender -</option>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+										</select>
+									</div>
+								</div>
+								
+								<!-- JobInvolvement -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="JobInvolvement" id="category" required>
+											<option value="" disabled selected>- Job Involvement -</option>
+											<option value="1">Low</option>
+											<option value="2">Medium</option>
+											<option value="3">High</option>
+											<option value="4">Very High</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- JobLevel -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="JobLevel" id="category" required>
+											<option value="" disabled selected>- Job Level -</option>
+											<option value="1">Staff</option>
+											<option value="2">Officer</option>
+											<option value="3">Assistant Manager</option>
+											<option value="4">Manager</option>
+											<option value="5">Senior Manager</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- JobRole -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="JobRole" id="category" required>
+											<option value="" disabled selected>- Job Role -</option>
+											<option value="Sales Executive">Sales Executive</option>
+											<option value="Research Scientist">Research Scientist</option>
+											<option value="Laboratory Technician">Laboratory Technician</option>
+											<option value="Manufacturing Director">Manufacturing Director</option>
+											<option value="Healthcare Representative">Healthcare Representative</option>
+											<option value="Manager">Manager</option>
+											<option value="Sales Representative">Sales Representative</option>
+											<option value="Research Director">Research Director</option>
+											<option value="Human Resources">Human Resources</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- JobSatisfaction -->
+								<div class="3u$ 12u$(4)">
+									<div class="select-wrapper">
+										<select name="JobSatisfaction" id="category" required>
+											<option value="" disabled selected>- Job Satisfaction -</option>
+											<option value="1">Low</option>
+											<option value="2">Medium</option>
+											<option value="3">High</option>
+											<option value="4">Very High</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- MaritalStatus -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="MaritalStatus" id="category" required>
+											<option value="" disabled selected>- Marital Status -</option>
+											<option value="Single">Single</option>
+											<option value="Married">Married</option>
+											<option value="Divorced">Divorced</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- MonthlyIncome -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="MonthlyIncome" max='19999' min='1009' placeholder='- Monthly Income ($) -' required>
+								</div>
+								
+								<!-- MonthlyRate -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="MonthlyRate" max='26999' min='2094' placeholder='- Monthly Rate ($) -' required>
+								</div>
+
+								<!-- NumCompaniesWorked -->
+								<div class="3u$ 12u$(4)">
+									<input type="number" name="NumCompaniesWorked" max='9' min='0' placeholder='- Number Companies Worked -' required>
+								</div>
+
+								<!-- Overtime -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="OverTime" id="category" required>
+											<option value="" disabled selected>- Over Time -</option>
+											<option value="Yes">Yes</option>
+											<option value="No">No</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- PercentSalaryHike -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="PercentSalaryHike" max='25' min='11' placeholder='- Salary Hike (%) -' required>
+								</div>
+
+								<!-- PerformanceRating -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="PerformanceRating" id="category" required>
+											<option value="" disabled selected>- Performance Rating -</option>
+											<option value="3">Excellent</option>
+											<option value="4">Outstanding</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- RelationshipSatisfaction -->
+								<div class="3u$ 12u$(4)">
+									<div class="select-wrapper">
+										<select name="RelationshipSatisfaction" id="category" required>
+											<option value="" disabled selected>- Relationship Satisfaction -</option>
+											<option value="1">Low</option>
+											<option value="2">Medium</option>
+											<option value="3">High</option>
+											<option value="4">Very High</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- StockOptionLevel -->
+								<div class="3u 12u$(4)">
+									<div class="select-wrapper">
+										<select name="StockOptionLevel" id="category" required>
+											<option value="" disabled selected>- Stock Option Level -</option>
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- TotalWorkingYears -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="TotalWorkingYears" max='40' min='0' placeholder='- Total Working Years -' required>
+								</div>
+
+								<!-- TrainingTimesLastYear -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="TrainingTimesLastYear" max='6' min='0' placeholder='- Training Times Last Year -' required>
+								</div>
+
+								<!-- WorkLifeBalance -->
+								<div class="3u$ 12u$(4)">
+									<div class="select-wrapper">
+										<select name="WorkLifeBalance" id="category" required>
+											<option value="" disabled selected>- Work Life Balance -</option>
+											<option value="1">Bad</option>
+											<option value="2">Good</option>
+											<option value="3">Better</option>
+											<option value="4">Best</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- YearsAtCompany -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="YearsAtCompany" max='37' min='0' placeholder='- Years At Company -' required>
+								</div>
+
+								<!-- YearsInCurrentRole -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="YearsInCurrentRole" max='18' min='0' placeholder='- Years In Current Role -' required>
+								</div>
+
+								<!-- YearsSinceLastPromotion -->
+								<div class="3u 12u$(4)">
+									<input type="number" name="YearsSinceLastPromotion" max='15' min='0' placeholder='- Years Since Last Promotion -' required>
+								</div>
+
+								<!-- YearsWithCurrManager -->
+								<div class="3u$ 12u$(4)">
+									<input type="number" name="YearsWithCurrManager" max='7' min='0' placeholder='- Years With Curr Manager -' required>
+								</div>
+
+								<div class="12u$">
+									<br>
+									<center>
+										<ul class="actions">
+											<li><input type="submit" value="Start Prediction" class="button" /></li>
+											<li><input type="reset" value="Reset Submission" class="button alt" /></li>
+										</ul>
+									</center>
+								</div>
+							</div>
+						</form>
+					</section>	
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="8u 12u$(medium)">
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved.</li>
+							<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+							<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+						</ul>
+					</div>
+					<div class="4u$ 12u$(medium)">
+						<ul class="icons">
+							<li>Modified by Rizki Adi P. | 2021</li>
+							<li><a href="https://www.instagram.com/rizkiadip/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/in/rizkiadiprayitno/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/rizkiadip" class="icon fa-github"><span class="label">Github</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
